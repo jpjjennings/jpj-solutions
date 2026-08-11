@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================= SEO ============================= -->
+  <title>JPJ Solutions | AI-Powered Web Design &amp; Development</title>
+  <meta name="description" content="JPJ Solutions delivers fast, secure, and stunning websites powered by AI. Specialising in web design, UI/UX, landing pages, and bespoke functionality." />
+  <meta name="author" content="JPJ Solutions" />
+  <meta name="theme-color" content="#0a0f1e" />
+  <!-- REPLACE: update canonical URL to your live domain -->
+  <link rel="canonical" href="https://www.jpjsolutions.com/" />
+
+  <!-- ===================== Open Graph / Social ===================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JPJ Solutions" />
+  <meta property="og:title" content="JPJ Solutions | AI-Powered Web Design &amp; Development" />
+  <meta property="og:description" content="JPJ Solutions delivers fast, secure, and stunning websites powered by AI. Specialising in web design, UI/UX, landing pages, and bespoke functionality." />
+  <!-- REPLACE: update Open Graph URL + preview image -->
+  <meta property="og:url" content="https://www.jpjsolutions.com/" />
+  <meta property="og:image" content="https://www.jpjsolutions.com/images/og-preview.jpg" />
+
+  <!-- ===================== Twitter / X Cards ======================= -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JPJ Solutions | AI-Powered Web Design &amp; Development" />
+  <meta name="twitter:description" content="Fast, secure, and stunning websites powered by AI." />
+  <!-- REPLACE: update Twitter preview image -->
+  <meta name="twitter:image" content="https://www.jpjsolutions.com/images/og-preview.jpg" />
+
+  <!-- ========================= Favicon ============================= -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2310b981'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='46' font-weight='700' fill='%230a0f1e' text-anchor='middle'%3EJPJ%3C/text%3E%3C/svg%3E" />
+
+  <!-- ======================= Google Fonts ========================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ========================= Styles ============================= -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Skip to content link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ======================================================================
+       NAVBAR — sticky glass-morphism
+  ======================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo" aria-label="JPJ Solutions home">
+        <span class="nav-logo-mark">JPJ</span>
+        <span class="nav-logo-text">Solutions</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#process" class="nav-link">Process</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark / light mode toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme" aria-pressed="false">
+          <!-- Sun icon (shown in dark mode → click for light) -->
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon icon (shown in light mode → click for dark) -->
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====================================================================
+         HERO
+    ===================================================================== -->
+    <section class="hero" id="home">
+      <!-- Canvas particle background (rendered by js/main.js) -->
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <span class="badge reveal">AI-Powered <span class="badge-star">&#10022;</span></span>
+        <h1 class="hero-title reveal">JPJ Solutions</h1>
+        <p class="hero-tagline reveal">Modern Websites. Built Smarter with AI.</p>
+
+        <!-- Typewriter effect target -->
+        <p class="hero-typewriter reveal" aria-live="polite">
+          <span id="typewriter"></span><span class="cursor" aria-hidden="true">|</span>
+        </p>
+
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn btn-primary" data-scroll>View My Work</a>
+          <a href="#contact" class="btn btn-ghost" data-scroll>Get in Touch</a>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" data-scroll aria-label="Scroll to about section">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT
+    ===================================================================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Who I Am</span>
+          <h2 class="section-title">About JPJ Solutions</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <!-- Avatar placeholder: styled initials. REPLACE with a real photo if desired. -->
+            <div class="avatar" role="img" aria-label="Portrait placeholder for JPJ Solutions">
+              <span>JPJ</span>
+            </div>
+            <span class="about-visual-glow" aria-hidden="true"></span>
+          </div>
+
+          <div class="about-body reveal">
+            <!-- REPLACE: bio text -->
+            <p class="about-bio">
+              I'm an IT professional with over 8 years of experience, specialising in AI-driven
+              solutions and high-pressure incident management. I hold a Bachelor's degree in
+              Cybersecurity &mdash; an area I'm deeply passionate about &mdash; and I bring that same
+              precision, security-first mindset, and technical depth to every website I build.
+              At JPJ Solutions, I combine cutting-edge AI tooling with real-world technical
+              expertise to deliver websites that are fast, secure, and built to impress.
+            </p>
+
+            <div class="stats">
+              <div class="stat-card">
+                <span class="stat-value">8+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">AI</span>
+                <span class="stat-label">AI-Powered Builds</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value" aria-hidden="true">&#128274;</span>
+                <span class="stat-label">Security-First</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Responsive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SERVICES
+    ===================================================================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">What I Offer</span>
+          <h2 class="section-title">Services</h2>
+          <p class="section-sub">End-to-end web solutions, engineered with an AI edge.</p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Website Design -->
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="2" y1="8" x2="22" y2="8"></line><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </span>
+            <h3 class="service-title">Website Design</h3>
+            <p class="service-desc">Custom, visually stunning websites tailored to your brand.</p>
+          </article>
+
+          <!-- UI/UX Design -->
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+            </span>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-desc">Intuitive user experiences built around your audience.</p>
+          </article>
+
+          <!-- Landing Pages -->
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+            </span>
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="service-desc">High-converting, focused pages that drive results.</p>
+          </article>
+
+          <!-- Hosting -->
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"></rect><rect x="2" y="14" width="20" height="8" rx="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+            </span>
+            <h3 class="service-title">Hosting</h3>
+            <p class="service-desc">Reliable, secure hosting solutions to keep your site live and fast.</p>
+          </article>
+
+          <!-- Maintenance -->
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </span>
+            <h3 class="service-title">Maintenance</h3>
+            <p class="service-desc">Ongoing support and updates so your site stays at its best.</p>
+          </article>
+
+          <!-- Bespoke Features & Functionality -->
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </span>
+            <h3 class="service-title">Bespoke Features &amp; Functionality</h3>
+            <p class="service-desc">Custom-built tools, integrations, and interactions unique to your needs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PORTFOLIO / WORK
+    ===================================================================== -->
+    <section class="section work" id="work">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Selected Projects</span>
+          <h2 class="section-title">My Work</h2>
+          <p class="section-sub">A snapshot of the kinds of builds I deliver.</p>
+        </header>
+
+        <!-- Filter buttons -->
+        <div class="filters reveal" role="group" aria-label="Filter portfolio projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="website-design">Website Design</button>
+          <button class="filter-btn" data-filter="landing-page">Landing Page</button>
+          <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+          <button class="filter-btn" data-filter="e-commerce">E-commerce</button>
+          <button class="filter-btn" data-filter="bespoke">Bespoke</button>
+        </div>
+
+        <!-- Project grid. Data lives in data-* attributes and is read by the modal JS. -->
+        <div class="work-grid" id="workGrid">
+          <!-- 1. ShopEase -->
+          <article class="project-card reveal" data-tags="e-commerce ui-ux"
+                   data-title="ShopEase"
+                   data-category="E-commerce Store"
+                   data-image="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200"
+                   data-stack="Shopify, JavaScript, UI/UX, Payments"
+                   data-desc="A conversion-focused e-commerce storefront with a frictionless checkout, smart product filtering, and a clean, mobile-first shopping experience designed to maximise sales.">
+            <img class="project-img" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600" alt="ShopEase e-commerce storefront on a laptop" loading="lazy" width="600" height="400" />
+            <div class="project-overlay">
+              <div class="project-tags"><span>E-commerce</span><span>UI/UX</span></div>
+              <h3 class="project-title">ShopEase</h3>
+              <p class="project-cat">E-commerce Store</p>
+              <p class="project-hover-desc">A conversion-focused storefront with frictionless checkout and smart filtering.</p>
+              <button class="btn btn-sm btn-primary project-open">View Project</button>
+            </div>
+          </article>
+
+          <!-- 2. Bella Cucina -->
+          <article class="project-card reveal" data-tags="landing-page website-design"
+                   data-title="Bella Cucina"
+                   data-category="Restaurant Landing Page"
+                   data-image="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200"
+                   data-stack="HTML, CSS, GSAP, Reservations API"
+                   data-desc="An appetising single-page site for an Italian restaurant, featuring an immersive hero, an interactive menu, and an integrated table-reservation flow.">
+            <img class="project-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Bella Cucina restaurant interior landing page" loading="lazy" width="600" height="400" />
+            <div class="project-overlay">
+              <div class="project-tags"><span>Landing Page</span><span>Design</span></div>
+              <h3 class="project-title">Bella Cucina</h3>
+              <p class="project-cat">Restaurant Landing Page</p>
+              <p class="project-hover-desc">An immersive single-page site with menu and reservation flow.</p>
+              <button class="btn btn-sm btn-primary project-open">View Project</button>
+            </div>
+          </article>
+
+          <!-- 3. DashFlow SaaS -->
+          <article class="project-card reveal" data-tags="ui-ux bespoke"
+                   data-title="DashFlow SaaS"
+                   data-category="SaaS Dashboard"
+                   data-image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200"
+                   data-stack="React, TypeScript, D3.js, Design System"
+                   data-desc="A data-dense analytics dashboard for a SaaS platform, with real-time charts, a custom component library, and a bespoke role-based settings module.">
+            <img class="project-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" alt="DashFlow SaaS analytics dashboard with charts" loading="lazy" width="600" height="400" />
+            <div class="project-overlay">
+              <div class="project-tags"><span>UI/UX</span><span>Bespoke</span></div>
+              <h3 class="project-title">DashFlow SaaS</h3>
+              <p class="project-cat">SaaS Dashboard</p>
+              <p class="project-hover-desc">Real-time analytics with a custom component library.</p>
+              <button class="btn btn-sm btn-primary project-open">View Project</button>
+            </div>
+          </article>
+
+          <!-- 4. CyberShield -->
+          <article class="project-card reveal" data-tags="website-design bespoke"
+                   data-title="CyberShield"
+                   data-category="Cybersecurity Consultancy"
+                   data-image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200"
+                   data-stack="Next.js, Tailwind, Security Hardening, SEO"
+                   data-desc="A trust-building website for a cybersecurity consultancy, with a hardened build, clear service breakdown, and a lead-capture flow tuned for enterprise clients.">
+            <img class="project-img" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600" alt="CyberShield cybersecurity consultancy website" loading="lazy" width="600" height="400" />
+            <div class="project-overlay">
+              <div class="project-tags"><span>Website Design</span><span>Security</span></div>
+              <h3 class="project-title">CyberShield</h3>
+              <p class="project-cat">Cybersecurity Consultancy</p>
+              <p class="project-hover-desc">A hardened, trust-building site tuned for enterprise leads.</p>
+              <button class="btn btn-sm btn-primary project-open">View Project</button>
+            </div>
+          </article>
+
+          <!-- 5. ProFix Trades -->
+          <article class="project-card reveal" data-tags="website-design"
+                   data-title="ProFix Trades"
+                   data-category="Local Tradesperson Site"
+                   data-image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200"
+                   data-stack="HTML, CSS, JavaScript, Local SEO, Maintenance Plan"
+                   data-desc="A straightforward, high-trust website for a local tradesperson, with clear service areas, a quote request form, and an ongoing maintenance plan to keep it fresh.">
+            <img class="project-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="ProFix Trades local tradesperson website" loading="lazy" width="600" height="400" />
+            <div class="project-overlay">
+              <div class="project-tags"><span>Website Design</span><span>Maintenance</span></div>
+              <h3 class="project-title">ProFix Trades</h3>
+              <p class="project-cat">Local Tradesperson Site</p>
+              <p class="project-hover-desc">High-trust local site with quote form and maintenance plan.</p>
+              <button class="btn btn-sm btn-primary project-open">View Project</button>
+            </div>
+          </article>
+
+          <!-- 6. Lumina Creative -->
+          <article class="project-card reveal" data-tags="landing-page ui-ux"
+                   data-title="Lumina Creative"
+                   data-category="Creative Portfolio"
+                   data-image="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200"
+                   data-stack="HTML, CSS, GSAP, Motion Design"
+                   data-desc="A bold portfolio for a creative professional, with expressive motion design, a masonry gallery, and a focused contact section to convert visitors into clients.">
+            <img class="project-img" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600" alt="Lumina Creative portfolio website design" loading="lazy" width="600" height="400" />
+            <div class="project-overlay">
+              <div class="project-tags"><span>Landing Page</span><span>UI/UX</span></div>
+              <h3 class="project-title">Lumina Creative</h3>
+              <p class="project-cat">Creative Portfolio</p>
+              <p class="project-hover-desc">Expressive motion design with a masonry gallery.</p>
+              <button class="btn btn-sm btn-primary project-open">View Project</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         TESTIMONIALS
+    ===================================================================== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Kind Words</span>
+          <h2 class="section-title">What Clients Say</h2>
+        </header>
+
+        <div class="carousel reveal">
+          <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous testimonial">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <div class="carousel-viewport">
+            <ul class="carousel-track" id="carouselTrack">
+              <!-- REPLACE: testimonials with real client reviews -->
+              <li class="testimonial">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"JPJ Solutions rebuilt our store from scratch and sales jumped within weeks. The attention to detail and speed of delivery was genuinely impressive."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-avatar" aria-hidden="true">SE</span>
+                  <div>
+                    <strong>Sarah Ellis</strong>
+                    <span>Founder, ShopEase</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonial">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"The reservation site is beautiful and our tables fill up faster than ever. Communication throughout the project was clear and professional."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-avatar" aria-hidden="true">MR</span>
+                  <div>
+                    <strong>Marco Rossi</strong>
+                    <span>Owner, Bella Cucina</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonial">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Our dashboard finally makes sense to customers. The custom component work was exactly what our team needed to scale confidently."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-avatar" aria-hidden="true">PN</span>
+                  <div>
+                    <strong>Priya Nair</strong>
+                    <span>Product Lead, DashFlow</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonial">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Security was our top concern and JPJ delivered a hardened, fast site we can trust. Their cybersecurity background really shows."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-avatar" aria-hidden="true">DK</span>
+                  <div>
+                    <strong>David Kim</strong>
+                    <span>Director, CyberShield</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="testimonial">
+                <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">"Reliable, responsive, and genuinely helpful. My new site brings in enquiries every single week and the maintenance plan is worry-free."</p>
+                <div class="testimonial-author">
+                  <span class="testimonial-avatar" aria-hidden="true">TB</span>
+                  <div>
+                    <strong>Tom Bradley</strong>
+                    <span>Owner, ProFix Trades</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next testimonial">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choose testimonial"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PROCESS
+    ===================================================================== -->
+    <section class="section process" id="process">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">How It Works</span>
+          <h2 class="section-title">My Process</h2>
+          <p class="section-sub">A clear, collaborative path from idea to launch.</p>
+        </header>
+
+        <ol class="process-steps">
+          <li class="process-step reveal">
+            <span class="process-num">1</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </span>
+            <h3 class="process-title">Discovery &amp; Brief</h3>
+            <p class="process-desc">We define your goals, audience, and requirements to set a clear direction.</p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">2</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+            </span>
+            <h3 class="process-title">Design &amp; Prototype</h3>
+            <p class="process-desc">I craft a visual concept and interactive prototype for your feedback.</p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">3</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </span>
+            <h3 class="process-title">AI-Powered Build</h3>
+            <p class="process-desc">I build fast, clean, and secure code accelerated by modern AI tooling.</p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">4</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </span>
+            <h3 class="process-title">Review &amp; Refine</h3>
+            <p class="process-desc">We polish every detail together until it's exactly right.</p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">5</span>
+            <span class="process-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91 0z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path></svg>
+            </span>
+            <h3 class="process-title">Launch &amp; Support</h3>
+            <p class="process-desc">I deploy your site and provide ongoing support to keep it thriving.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT
+    ===================================================================== -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-intro reveal">
+          <span class="section-kicker">Let's Talk</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-sub">Have a project in mind? Tell me about it and I'll get back to you.</p>
+
+          <ul class="contact-details">
+            <li>
+              <span class="contact-detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <!-- REPLACE: business email -->
+              <a href="mailto:hello@jpjsolutions.com">hello@jpjsolutions.com</a>
+            </li>
+          </ul>
+
+          <div class="socials" aria-label="Social links">
+            <!-- REPLACE: LinkedIn URL -->
+            <a href="#" class="social" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.25 8h4.5V24H.25V8zM8 8h4.31v2.19h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V24h-4.5v-6.6c0-1.57-.03-3.6-2.19-3.6-2.19 0-2.53 1.71-2.53 3.48V24H8V8z"></path></svg>
+            </a>
+            <!-- REPLACE: GitHub URL -->
+            <a href="#" class="social" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12.01 12.01 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z"></path></svg>
+            </a>
+            <!-- REPLACE: Twitter/X URL -->
+            <a href="#" class="social" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 1.5h3.68l-8.04 9.19L24 22.5h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.5h7.59l5.24 6.93L18.9 1.5zm-1.29 18.8h2.04L6.49 3.6H4.3l13.31 16.7z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPLACE: hook the form action up to your backend / form service -->
+        <form class="contact-form reveal" id="contactForm" action="#" method="post" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="What's this about?" />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+  ===================================================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="nav-logo" data-scroll>
+        <span class="nav-logo-mark">JPJ</span>
+        <span class="nav-logo-text">Solutions</span>
+      </a>
+      <p class="footer-tag">Modern Websites. Built Smarter with AI.</p>
+      <span class="badge badge-sm">AI-Powered <span class="badge-star">&#10022;</span></span>
+      <p class="footer-copy">&copy; <span id="year"></span> JPJ Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       PORTFOLIO MODAL / LIGHTBOX
+  ===================================================================== -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" id="modalClose" aria-label="Close project details" data-close-modal>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <img class="modal-img" id="modalImg" src="" alt="" />
+      <div class="modal-body">
+        <p class="modal-cat" id="modalCat"></p>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-stack" id="modalStack" aria-label="Tech stack"></div>
+        <!-- REPLACE: live site URL -->
+        <a class="btn btn-primary" id="modalLive" href="#" target="_blank" rel="noopener">View Live Site</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
