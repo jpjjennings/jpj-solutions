@@ -65,7 +65,7 @@
 
   /* Layout */
   --container: 1160px;
-  --nav-h: 72px;
+  --nav-h: 110px;
 }
 
 /* Light theme overrides */
@@ -209,7 +209,7 @@ ul, ol { list-style: none; }
   letter-spacing: 0.04em;
 }
 .badge-sm { font-size: 0.75rem; padding: 5px 12px; }
-.badge-star { color: var(--color-accent); animation: spin 6s linear infinite; }
+.badge-can { width: 10px; height: 14px; color: var(--color-accent); flex: 0 0 auto; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* =====================================================================
@@ -230,15 +230,14 @@ ul, ol { list-style: none; }
 
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 
-.nav-logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.2rem; }
-.nav-logo-mark {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
-  color: #04231a;
-  padding: 4px 9px;
+.nav-logo { display: flex; align-items: center; }
+.nav-logo-image {
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
   border-radius: var(--radius-sm);
-  letter-spacing: 0.02em;
 }
-.nav-logo-text { color: var(--color-heading); }
+.footer .nav-logo-image { width: 168px; height: 168px; }
 
 .nav-links { display: flex; align-items: center; gap: 6px; }
 .nav-link {
@@ -347,13 +346,11 @@ ul, ol { list-style: none; }
 .about-visual { position: relative; display: flex; justify-content: center; }
 .avatar {
   width: min(280px, 70vw); aspect-ratio: 1; border-radius: 50%;
-  display: grid; place-items: center;
-  font-size: clamp(3rem, 8vw, 4.5rem); font-weight: 900; letter-spacing: 0.04em;
-  color: #04231a;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  overflow: hidden;
   box-shadow: 0 20px 60px var(--accent-glow);
   position: relative; z-index: 1;
 }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
 .about-visual-glow {
   position: absolute; inset: 0; margin: auto; width: 70%; aspect-ratio: 1; border-radius: 50%;
   background: var(--color-accent); filter: blur(80px); opacity: 0.4; z-index: 0;
