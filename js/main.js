@@ -387,8 +387,9 @@
         stackEl.appendChild(span);
       });
 
-      // REPLACE: real live-site link would go here per project.
-      liveEl.setAttribute('href', '#');
+       liveEl.setAttribute('href', card.dataset.live || '#');
+       liveEl.classList.toggle('disabled', !card.dataset.live);
+       liveEl.setAttribute('aria-disabled', String(!card.dataset.live));
 
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
